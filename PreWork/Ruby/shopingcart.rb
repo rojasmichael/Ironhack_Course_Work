@@ -1,12 +1,15 @@
 class ShoppingCart
 	def initialize
 		@items = []
+	end 
 	def add_item(item)
-		
+		@items.push(item)
+	end
+	def checkout (items)
+		items.each do 
 		
 	end
 		
-	end
 end
 
 	class Item
@@ -44,10 +47,19 @@ class Houseware < item
 
 		end
 	end
-banana = Fruit.new("banana", 10)
-orange juice = Fruit.new("orange juice", 10)
-rice = Item.new("rice",1)
-vacuum cleaner = Houseware.new("vacuum cleaner",150)
-anchovies = Item.anchovies("anchovies",2)
+
+
+joshs_cart = ShoppingCart.new
+banana = Fruit.new("Banana", 10)
+vaccuum = Houseware.new("Vaccuum", 150)
+oj = Item.new("Orange Juice", 10)
+rice = Item.new("Rice", 1)
+anchovies = Item.new("Anchovies", 2)
+
+joshs_cart.add_item(oj)
+joshs_cart.add_item(rice)
+joshs_cart.checkout
+
+
 
 
