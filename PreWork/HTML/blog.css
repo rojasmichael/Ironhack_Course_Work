@@ -1,0 +1,12 @@
+p {
+  background-color: grey;
+}
+body {
+  background-color: #cccbcb;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+header {
+  font-family: Cambria, Georgia, serif;
+  font-size: 40px;
+}

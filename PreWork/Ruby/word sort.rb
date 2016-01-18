@@ -10,5 +10,5 @@ p split_sentence
 
 end
 
-word_sort("My favorite language is ruby")
+word_sort("My favorite language is ruby.")
 

@@ -6,11 +6,16 @@ phrase.each do | letter |
 
 if letter == " "
    string += " "
-else 
+elsif letter.ord >= 90 && letter.ord <= 98
+
+string += ((letter.ord + num)+26).chr
+else
+ 	 
 	string += (letter.ord + num).chr
+
 end
 end 
 puts string 
 end 
 
-solve_cipher("hello test",-1)
+solve_cipher("pb uhdo qdph lv grqdog gxfn", -3)
