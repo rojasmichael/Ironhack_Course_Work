@@ -6,6 +6,8 @@ class Task
         @id = @@current_id
         @@current_id += 1
         @completed = false
+        @created_at = Time.now
+
     end
 
     
@@ -23,6 +25,12 @@ class Task
     def make_incomplete!
 
     	@completed = false 
+
+    end 
+
+    def update_content!(content)
+
+    	@content = content
 
     end 
 
