@@ -39,7 +39,8 @@ white_pawn = Pawn.new(1,0,"white", false)
 @board[x,6] = Pawn.new( :white, :pawn )
         end
 
-board = [[],[],[],[],[],[],[]]
+pieces = [[], ]
+my_board = Board.new(pieces)
 
 
 puts "\nTesting the King"

@@ -1,5 +1,6 @@
 
-class Rook
+
+class Bishop
 	def initialize(pos_x, pos_y, color)
 		@pos_x = pos_x
 		@pos_y = pos_y
@@ -13,7 +14,7 @@ class Rook
 		dx = (dst_x - @pos_x).abs
 		dy = (dst_y - @pos_y).abs
 
-		if dx == 0 || dy == 0
+		if (dx == dy)
 			true
 		else
 			false 

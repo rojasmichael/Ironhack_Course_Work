@@ -20,3 +20,6 @@ my_game.add_room(room3)
 
 
 my_game.play
+
+
+#create a room that has a item in it. Item in the room class and inventory in the game. Pick up items and put into the inventory. 
