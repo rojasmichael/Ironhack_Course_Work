@@ -16,5 +16,11 @@ describe Lexiconomitron do
    #  it "does not remove a t when there is no t" do
    #  	expect(@lexi.eat_t("Hey You!")).to eq("Hey You!")
   	# end
+end
+  	describe "oompa_loompa" do
+  		it "test if array works" do
+  			expect(@lexi.oompa_loompa("if you are here")).to eq(nil)
+  	end
+
 	end 
 end

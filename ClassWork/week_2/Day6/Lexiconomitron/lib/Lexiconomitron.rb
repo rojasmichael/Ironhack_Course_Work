@@ -23,12 +23,9 @@ class Lexiconomitron
  		 	array_no_t = array.map do |word|
  		 		eat_t(word)
  		 	end
-
  		 	array_no_t.delete_if { |word| word.length > 3 }
  		 end
  	end
-
-
 end
 
 # lexi = Lexiconomitron.new
