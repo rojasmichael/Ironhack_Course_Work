@@ -18,6 +18,12 @@ class TodoList
 
     end 
     
+    def load_task
+
+        @tasks
+
+    end
+
    
 
 end
