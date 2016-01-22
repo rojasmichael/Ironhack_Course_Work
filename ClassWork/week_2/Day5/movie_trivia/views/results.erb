@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<title></title>
+</head>
+<body>
+
+<h1>Search Test</h1>
+
+<p>
+  <strong><%=@movie%></strong>
+ click on the movie that was in <%=@random.year%>?
+</p>
+
+<h2>
+  <% @movie_list.each do | movies |  %>
+
+  <% if @random.year == movies.year %>
+
+  <img class="poster" src="<%= movies.poster %>" onclick="alert('yay')">
+
+  <% else %>
+
+ <img class="poster" src="<%= movies.poster %>" onclick="alert('boo')">
+
+
+  <%end%>
+
+
+  
+ 
+ 
+
+ 
+  <% end %>
+
+</h2>
+
+
+
+</body>
+</html>
+
+<!-- <img src="<%#= @first_result.poster %>"> -->
+
+<!-- <p>Directed by <%#= @first_result.director[0] %></p> -->

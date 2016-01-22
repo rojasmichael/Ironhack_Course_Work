@@ -1,0 +1,9 @@
+body { 
+	width: 900px;
+	margin: 0 auto;
+}
+
+.poster { 
+	width: 33%;
+	height: 250px;
+}
