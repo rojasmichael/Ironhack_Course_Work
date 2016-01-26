@@ -1,3 +1,25 @@
 body{
     background-image: url("shutterstock_134707556.jpg");
 }
+
+.box1{
+	text-align: center;
+	padding:15px 5px 5px;
+	background-color: gray;
+}	
+
+.transbutton {
+    background: transparent;
+    border: none !important;
+    color: white;
+}
+
+.bueno {
+	background-color: #FFFCCC; 
+	/*font-size: 1pc;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px;*/
+    /*position: relative;*/
+    text-align: center;
+}
