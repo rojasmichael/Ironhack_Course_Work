@@ -4,4 +4,9 @@ class Project < ActiveRecord::Base
 		where("created_at <= ?", d-1.week.ago).destory_all
 	end
 
+	def self.last_created_projects(arg)
+		@projects = Project.limit(10)
+	
+	end
+
 end

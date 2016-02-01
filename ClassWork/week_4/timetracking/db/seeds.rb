@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Project.create name: 'Ironhack', description: 'Ironhack is a...'
-Project.create name: 'Time tracking app'
-Project.create name: 'Project3', description: 'This is project 3'
+# Project.create name: 'Ironhack', description: 'Ironhack is a...'
+# Project.create name: 'Time tracking app'
+# Project.create name: 'Project3', description: 'This is project 3'
 
-25.Project do |t|
-	Project.create(name: {i}, description: {i})
+25.times do |t|
+	Project.create(name:"The name is #{t}", description:"The description is #{t}")
 end
 
