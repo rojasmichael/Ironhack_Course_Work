@@ -1,0 +1,23 @@
+<% if @entry.errors.any? %>
+
+<ul>
+	<% @entry.erros.full_messages.each do | error_msg| %>
+		<li><%= error_msg %></li>
+		<%end%>
+</ul>
+<%end%>
+
+<%= form_for [@project, @entry] do |f| %>
+<%= f.label :hours %>
+<%= f.text_feild :hours %>
+<br>
+<%= f.label :minutes %>
+<%= f.text_feild :mintues %>
+<br>
+<%= f.label :date %>
+<%= f.text_feild :date %>
+<br>
+
+<%= f.submit 'Save' %>
+
+<%end%>
