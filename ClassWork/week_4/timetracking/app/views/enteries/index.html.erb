@@ -1,10 +1,11 @@
 <h1><%= @project.name %></h1>
 
 <ul>
-<% @project.entries.each  do |e| %>
+<% @project.entries.each  do |entry| %>
 
-	<li><%= "#{e.hours} #{e.minutes}" %></li>
+	<li><%= "#{entry.hours} #{entry.minutes}" %></li>
+	<%=link_to("Edit Link"), edit_project_entry_path(@project, entry)) %>
 <% end %>
 </ul>
-<% = link_to("Go To Projects", projects_path) %>
-<% = link_to("New Entry",new_project_entry_path(@project)) %>
+<%= link_to("Go To Projects", projects_path) %>
+<%= link_to("New Entry",new_project_entry_path(@project)) %>
