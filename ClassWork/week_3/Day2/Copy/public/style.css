@@ -1,0 +1,41 @@
+.container1{
+	max-width: 500px;
+	padding: 30px;
+	background-color: #F5F5F5;
+	margin: auto;
+
+}
+
+.text {
+	font-family: 'Roboto', sans-serif;
+	color: #aaa;
+}
+
+.color_word{
+color: #00BFFF;
+}
+
+.label_background {
+	background-color: white;
+	color: #aaa;
+	border-style: solid;
+}
+
+.notification1{
+	background-color: white;
+	margin-bottom: 2px;
+
+}
+
+.notification{
+	padding: 5px;
+
+}
+
+.logo-text{
+	font-family: "Roboto", sans-serif;
+	color: #aaa;
+	display: block;
+	padding-top: 15px;
+	padding-left: 60px;
+}
