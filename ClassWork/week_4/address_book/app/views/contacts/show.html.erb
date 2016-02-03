@@ -2,11 +2,18 @@
 <h2> Contact Detail </h2>
 
 <ul>
-<li>
-<%= @contact.name %>
-<%= @contact.phone %>
-<%= @contact.email %>
 
-</li>
+<li><%= @contact.name %></li>
+<li><%= @contact.phone %></li>
+<li><%= @contact.email %></li>
+<li><%= @contact.address %></li>
 
+
+<form action="/contacts/fav" method = "POST">
+
+<button name="button" value="<%=  @contact.id %>" type="submit">Favorite</button>
+<input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+</form>
 </ul>

@@ -7,8 +7,11 @@
 
   get '/contacts' => "contacts#index"
 
-  get '/contacts/:id' => "contacts#show"
 
+  post '/contacts/fav' =>"contacts#favorite"
+
+  get '/contacts/fav' =>"contacts#show_fav"
+  get '/contacts/:id' => "contacts#show"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
