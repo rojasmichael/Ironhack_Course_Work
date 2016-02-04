@@ -5,7 +5,8 @@
 
 	<li><%= "#{entry.hours} #{entry.minutes}" %></li>
 	<%=link_to("Edit Link"), edit_project_entry_path(@project, entry)) %>
+	<% link_to("Delete", edit_project_entry_path(@project,entry),  method: :delete date: {confirm: "Are you sure you want to delete this entry?"}) %>
 <% end %>
 </ul>
 <%= link_to("Go To Projects", projects_path) %>
-<%= link_to("New Entry",new_project_entry_path(@project)) %>
+<%= link_to("New Entry",new_project_entry_path(@project) %>
