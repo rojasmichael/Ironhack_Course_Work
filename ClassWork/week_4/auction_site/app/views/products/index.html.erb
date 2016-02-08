@@ -1,0 +1,12 @@
+<h1>Oye Que Barato</h1>
+<h2>List of Products</h2>
+
+<ul>
+<% @prodcuts.each do |product| %>
+<li>
+<%= product.title %><br>
+<%= product.description %><br>
+<%= product.deadline %><br>
+</li>
+</ul>
+<%= link_to("New Product",new_user_product_path(@user)) %>

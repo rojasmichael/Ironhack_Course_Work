@@ -1,14 +1,2 @@
-<%= form_for [@project, @entry] do |f| %>
-<% f.label :hours %>
-<% f.text_input :hours %>
-<br>
-<% f.label :mintues %>
-<% f.text_input :mintues %>
-<br>
-<% f.label :date %>
-<% f.text_input :date %>
-<br>
-
-<% f.submit "Save" %>
-<%= link_to "Cancel", project_entries_path(@project)%>
-<% end %>
+<% flash_message %>
+<%= render'form' %>

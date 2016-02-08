@@ -1,4 +1,10 @@
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<% end %>
+
+
 <h1><%= @project.name %></h1>
+
 
 <ul>
 <% @project.entries.each  do |entry| %>

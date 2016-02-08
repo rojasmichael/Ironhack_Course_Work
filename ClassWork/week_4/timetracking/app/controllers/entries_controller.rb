@@ -1,11 +1,4 @@
-class EntriesController < ApplicationController
-  def destory
-    entry = Entry.find(params[:id])
-    entry.destory
-    redirect_to project_entries_path(parms[:project_id])
-  end
-
-
+ class EntriesController < ApplicationController
   def edit
   	@project = Project.find(params[:project_id])
   	@entry = @project.entries.where(id: params[:id]).first

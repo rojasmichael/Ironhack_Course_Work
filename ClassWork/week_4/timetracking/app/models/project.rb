@@ -1,6 +1,8 @@
 class Project < ActiveRecord::Base
 
-	has_many :entries
+	has_many :entries, dependent: :destory
+	has_many :participation
+	has_many :people, through: :participation
 
 	validates :name, presence: true, uniqueness: true, length: {maximum: 30}, format:{with: /(\w\s)+/}
 
