@@ -1,0 +1,26 @@
+<h1>List of Concerts</h1>
+
+<h2>Concerts This Month</h2>
+<ul>
+	<% @concerts_this_month.each do | concerts | %>
+		<li>
+		<%= link_to concerts.artist, concert_path(concerts) %><br>
+			<%= concerts.venue %><br>
+		</li>
+
+	<% end %>
+</ul>
+
+
+<h2>Concerts Happening Today</h2>
+
+<% @concerts_today.each do | concerts | %>
+	<li>
+		<%= link_to concerts.artist, concert_path(concerts) %><br>
+			<%= concerts.venue %><br>
+		</li>
+
+	<% end %>
+</ul>
+
+<%=link_to("Add New Concert",new_concert_path)%>
