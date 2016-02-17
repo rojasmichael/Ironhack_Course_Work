@@ -1,0 +1,13 @@
+<h1>Comic App</h1>
+<% unless current_user.nil? %>
+		<a href="/users/sign_out" data-method="delete">
+		Log out
+		</a>
+<% else %>
+	<a href="/users/sign_in">
+	Log in
+	</a>
+	<a href="/users/sign_up">
+	Sign up
+	</a>
+	<% end %>

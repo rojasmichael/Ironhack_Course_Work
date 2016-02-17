@@ -1,31 +1,49 @@
-if ("geolocation" in navigator){
-	
 
-	getUserLocation();
+$(document).on("ready", function(){
+
+	if ("geolocation" in navigator) {
+		//Browser has geolocation
+
+		getUserLocation();
+		
+	}
+	else {
+		console.log("Browser sucks")
+		//Browser does not have geolocation
+	}
+
+})
+
+//--------------------------------------------------------------------------------------
+
+function getUserLocation() {
+	//Third parameter is an object of options
+	navigator.geolocation.getCurrentPosition(success, error);
 }
 
-else{
-	
-
-}
-
-
-function getUserLocation (){
-	navigator.geolocation.getCurrentPosition( successCallback, errorCallback);
-	// optional 3rd parameter: optionsObj
-
-}
-
-
-function successCallback (position){
-	console.log("SUCCESS!!");
+function success(position) {
+	console.log("Success");
 	console.log(position);
-	console.log("Lat",position.coords.latitude);
-	console.log("Long", position.coords.longitude);
 
+	$(".js-lat-value").text(position.coords.latitude);
+	$(".js-long-value").text(position.coords.longitude);
 
-} 
+	var latitude = position.coords.latitude
+	var longitude = position.coords.longitude
 
-function errorCallback (error){
-	console.log("ERROR", error);
+	initMap(latitude, longitude);
+}
+
+function error(error) {
+	console.log("Error", error);
+}
+
+function initMap(latitude, longitude) {
+  // Create a map object and specify the DOM element for display.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: latitude, lng: longitude},
+    scrollwheel: false,
+    zoom: 19,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  });
 }

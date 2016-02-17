@@ -14,6 +14,7 @@ $(document).on("ready", function(){
 		event.preventDefault();
 
 		addChar();
+		
 	});
 });
 
