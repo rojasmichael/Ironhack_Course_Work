@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217210652) do
+ActiveRecord::Schema.define(version: 20160217215126) do
 
   create_table "matches", force: :cascade do |t|
     t.integer  "winner_faction"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20160217210652) do
     t.date     "date"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "winner_id"
+    t.integer  "loser_id"
   end
 
   create_table "players", force: :cascade do |t|
